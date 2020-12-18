@@ -21,7 +21,10 @@ public class CadasroSteps {
 
 	@Dado("que eu acesse o site")
 	public void que_eu_acesse_o_site() throws InterruptedException {
-		System.getProperty("webdriver.chrome.driver", "D:\\Java_Geral\\Desafio_accenture\\ProjetoTricentis\\src\\test\\resources\\Driver_versao87");
+		
+		String path = System.getProperty("user.dir");
+		System.getProperty("webdriver.chrome.driver", path.concat("\\src\\test\\esources\\Driver_versao87\\Chromedriver.exe"));
+		System.out.println(path.concat("\\src\\test\\resources\\Driver_versao87\\Chromedriver.exe"));
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://sampleapp.tricentis.com/101/app.php");
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
