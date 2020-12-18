@@ -281,10 +281,14 @@ public class PageFormulario {
 		WebElement el1 = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("body > div.sweet-alert.showSweetAlert.visible > div.sa-button-container > div > button"))));
 		return el1;
 	}
-	public WebElement pegaMsg(String string) {
+	public String pegaMsg() {
 		WebElement msgFinal = driver.findElement(By.cssSelector("body > div.sweet-alert.showSweetAlert.visible > h2"));
 		botaoOk().click();
-		return msgFinal;
+		return msgFinal.getText();
+	}
+	public void fechartudo() throws InterruptedException {
+		Thread.sleep(5000);
+		driver.quit();
 	}
 
 }

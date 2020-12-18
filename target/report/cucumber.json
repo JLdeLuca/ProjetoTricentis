@@ -3,7 +3,7 @@
     "line": 4,
     "elements": [
       {
-        "start_timestamp": "2020-12-18T02:31:30.959Z",
+        "start_timestamp": "2020-12-18T04:14:52.515Z",
         "line": 6,
         "name": "Realizar um cadstro com envio de email",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 12227000000,
+              "duration": 12365000000,
               "status": "passed"
             },
             "line": 7,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 2931000000,
+              "duration": 2901000000,
               "status": "passed"
             },
             "line": 8,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 693000000,
+              "duration": 683000000,
               "status": "passed"
             },
             "line": 9,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 672000000,
+              "duration": 681000000,
               "status": "passed"
             },
             "line": 10,
@@ -61,9 +61,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c[[ChromeDriver: chrome on XP (e42afa416902ae2faed4ea447218ed40)] -\u003e css selector: body \u003e div.sweet-alert.showSweetAlert.visible \u003e h2]\u003e but was:\u003cSending e-mail success!\u003e\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\r\n\tat org.junit.Assert.assertEquals(Assert.java:118)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat br.com.luca.stepDefinition.CadasroSteps.eu_recebo_a_mensagem(CadasroSteps.java:53)\r\n\tat ✽.eu recebo a mensagem \"Sending e-mail success!\"(file:///D:/Java_Geral/Desafio_accenture/ProjetoTricentis/src/test/resources/Features/Realizar_um_cadastro_de_email_no_site.feature:11)\r\n",
-              "duration": 9010000000,
-              "status": "failed"
+              "duration": 14611000000,
+              "status": "passed"
             },
             "line": 11,
             "name": "eu recebo a mensagem \"Sending e-mail success!\"",

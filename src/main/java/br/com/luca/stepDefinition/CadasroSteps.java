@@ -1,6 +1,7 @@
 package br.com.luca.stepDefinition;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
@@ -48,9 +49,9 @@ public class CadasroSteps {
 	}
 
 	@Entao("eu recebo a mensagem {string}")
-	public void eu_recebo_a_mensagem(String string) {
-		String msgFinal = null;
-		assertEquals(pageFormulario.pegaMsg(msgFinal), string);
+	public void eu_recebo_a_mensagem(String string) throws InterruptedException {
+		assertEquals(pageFormulario.pegaMsg(), string);
+		pageFormulario.fechartudo();
 	}
 
 }

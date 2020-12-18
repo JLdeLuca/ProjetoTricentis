@@ -1,13 +1,15 @@
 package Runner;
 
-import org.junit.AfterClass;
+import org.junit.After;
 import org.openqa.selenium.WebDriver;
+
+
 
 public class Hooks {
 	
 	WebDriver driver;
 	
-	@AfterClass
+	@After
 	public void TeaDown() {
 		driver.quit();
 	}
