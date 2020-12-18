@@ -55,7 +55,7 @@ public class PageFormulario {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("javascript:window.scrollBy(0,350)");
         form3cp1().sendKeys("12/17/2021");
-        form3cp2().sendKeys("3000000");
+        form3cp2().sendKeys("300000");
         form3cp3().sendKeys("Bonus 8");
         form3cp4().sendKeys("Full Coverage");
         form3cp5().click();;
@@ -281,13 +281,13 @@ public class PageFormulario {
 		WebElement el1 = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("body > div.sweet-alert.showSweetAlert.visible > div.sa-button-container > div > button"))));
 		return el1;
 	}
-	public String pegaMsg() {
+	public String pegaMsg() throws InterruptedException {
 		WebElement msgFinal = driver.findElement(By.cssSelector("body > div.sweet-alert.showSweetAlert.visible > h2"));
+		Thread.sleep(3000);
 		botaoOk().click();
 		return msgFinal.getText();
 	}
 	public void fechartudo() throws InterruptedException {
-		Thread.sleep(5000);
 		driver.quit();
 	}
 
