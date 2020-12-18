@@ -285,6 +285,7 @@ public class PageFormulario {
 		WebElement msgFinal = driver.findElement(By.cssSelector("body > div.sweet-alert.showSweetAlert.visible > h2"));
 		Thread.sleep(3000);
 		botaoOk().click();
+		
 		return msgFinal.getText();
 	}
 	public void fechartudo() throws InterruptedException {
