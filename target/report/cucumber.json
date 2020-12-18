@@ -1,0 +1,105 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-18T02:31:30.959Z",
+        "line": 6,
+        "name": "Realizar um cadstro com envio de email",
+        "description": "",
+        "id": "cadastro-de-email-no-site;realizar-um-cadstro-com-envio-de-email",
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12227000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "que eu acesse o site",
+            "match": {
+              "location": "br.com.luca.stepDefinition.CadasroSteps.que_eu_acesse_o_site()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2931000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "eu realizar o preenchimento dos formularios",
+            "match": {
+              "location": "br.com.luca.stepDefinition.CadasroSteps.eu_realizar_o_preenchimento_dos_formularios()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 693000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "seleciono o preco",
+            "match": {
+              "location": "br.com.luca.stepDefinition.CadasroSteps.seleciono_o_preco()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "duration": 672000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "efetuar o envio das informacoes",
+            "match": {
+              "location": "br.com.luca.stepDefinition.CadasroSteps.efetuar_o_envio_das_informacoes()"
+            },
+            "keyword": "E "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c[[ChromeDriver: chrome on XP (e42afa416902ae2faed4ea447218ed40)] -\u003e css selector: body \u003e div.sweet-alert.showSweetAlert.visible \u003e h2]\u003e but was:\u003cSending e-mail success!\u003e\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\r\n\tat org.junit.Assert.assertEquals(Assert.java:118)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat br.com.luca.stepDefinition.CadasroSteps.eu_recebo_a_mensagem(CadasroSteps.java:53)\r\n\tat ✽.eu recebo a mensagem \"Sending e-mail success!\"(file:///D:/Java_Geral/Desafio_accenture/ProjetoTricentis/src/test/resources/Features/Realizar_um_cadastro_de_email_no_site.feature:11)\r\n",
+              "duration": 9010000000,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "eu recebo a mensagem \"Sending e-mail success!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Sending e-mail success!\"",
+                  "offset": 21
+                }
+              ],
+              "location": "br.com.luca.stepDefinition.CadasroSteps.eu_recebo_a_mensagem(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@web"
+          }
+        ]
+      }
+    ],
+    "name": "Cadastro de email no site",
+    "description": "",
+    "id": "cadastro-de-email-no-site",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/Features/Realizar_um_cadastro_de_email_no_site.feature",
+    "tags": [
+      {
+        "name": "@web",
+        "type": "Tag",
+        "location": {
+          "line": 3,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
