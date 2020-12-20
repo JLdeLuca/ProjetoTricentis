@@ -17,7 +17,7 @@ public class CadasroSteps {
 	private PageFormulario pageFormulario;
 
 	@Dado("^que eu acesse o site$")
-	public void que_eu_acesse_o_site() {
+	public void queEuAcesseOSite()  {
 		String path = System.getProperty("user.dir");
 		System.getProperty("webdriver.chrome.driver", path.concat("\\src\\test\\esources\\Driver_versao87\\Chromedriver.exe"));
 		System.out.println(path.concat("\\src\\test\\resources\\Driver_versao87\\Chromedriver.exe"));
@@ -29,24 +29,25 @@ public class CadasroSteps {
 	}
 
 	@Quando("^eu realizar o preenchimento dos formularios$")
-	public void eu_realizar_o_preenchimento_dos_formularios() throws InterruptedException {
+	public void euRealizarOPreenchimentoDosFormularios() throws InterruptedException {
 		pageFormulario.pageForm1();
 		pageFormulario.pageForm2();
 		pageFormulario.pageForm3();
 	}
 
 	@Quando("^seleciono o preco$")
-	public void seleciono_o_preco() throws InterruptedException {
+	public void selecionoOPreco() throws InterruptedException {
 		pageFormulario.pageForm4();
 	}
 
 	@Quando("^efetuar o envio das informacoes$")
-	public void efetuar_o_envio_das_informacoes() throws InterruptedException {
+	public void efetuarOEnvioDasInformacoes() throws InterruptedException  {
 		pageFormulario.pageForm5();
+
 	}
 
 	@Entao("^eu recebo a mensagem \"([^\"]*)\"$")
-	public void eu_recebo_a_mensagem(String arg1) throws Throwable {
+	public void euReceboAMensagem(String arg1) throws InterruptedException  {
 //		assertEquals(pageFormulario.pegaMsg(), string);
 		pageFormulario.fechartudo();
 	}
