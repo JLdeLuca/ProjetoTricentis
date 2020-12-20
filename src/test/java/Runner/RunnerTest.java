@@ -4,9 +4,11 @@ import org.junit.After;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import io.cucumber.junit.CucumberOptions.SnippetType;
+import cucumber.api.CucumberOptions;
+import cucumber.api.SnippetType;
+import cucumber.api.junit.Cucumber;
+
+
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -16,7 +18,6 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 					"html:target/report/cucumber.html"},
 		snippets = SnippetType.CAMELCASE,
 		glue = {"br.com.luca.stepDefinition"},
-		dryRun = false,
 		monochrome = true,
 		tags = "@web"
 		)
