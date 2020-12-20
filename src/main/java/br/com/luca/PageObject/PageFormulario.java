@@ -283,9 +283,8 @@ public class PageFormulario {
 	}
 	public String pegaMsg() throws InterruptedException {
 		WebElement msgFinal = driver.findElement(By.cssSelector("body > div.sweet-alert.showSweetAlert.visible > h2"));
-		Thread.sleep(3000);
+		Thread.sleep(3000L);
 		botaoOk().click();
-		
 		return msgFinal.getText();
 	}
 	public void fechartudo() throws InterruptedException {
