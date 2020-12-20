@@ -1,5 +1,7 @@
 package br.com.luca.stepDefinition;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -47,8 +49,8 @@ public class CadasroSteps {
 	}
 
 	@Entao("^eu recebo a mensagem \"([^\"]*)\"$")
-	public void euReceboAMensagem(String arg1) throws InterruptedException  {
-//		assertEquals(pageFormulario.pegaMsg(), string);
+	public void euReceboAMensagem(String string) throws InterruptedException  {
+		assertEquals(pageFormulario.pegaMsg(), string);
 		pageFormulario.fechartudo();
 	}
 
