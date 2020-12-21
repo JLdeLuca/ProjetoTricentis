@@ -1,8 +1,6 @@
-package Runner;
+package runner;
 
-import org.junit.After;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
@@ -25,11 +23,4 @@ import cucumber.api.junit.Cucumber;
 
 public class RunnerTest {
 	
-	static WebDriver driver;
-	
-	@After
-	public static void fechar() {
-		driver.quit();
-	}
-
 }
