@@ -1,6 +1,8 @@
 # ProjetoTricentis
-AutomaÁ„o cadastro de email
+Automa√ß√£o cadastro de email
+
+- UTiliza√ß√£o de pageobjects em p√°gina WEB
 
 - Premissas:
-	- UtilizaÁ„o do Browser Chrome na Vers„o 87.0.4280.88 (Vers„o oficial) 64 bits
+	- Utiliza√ß√£o do Browser Chrome na Vers√£o 87.0.4280.88 (Vers√£o oficial) 64 bits
 	- O driver Chromedriver esta no local \\Driver_versao87\\Chromedriver.exe
