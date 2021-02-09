@@ -2,12 +2,14 @@ package br.com.luca.stepDefinition;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import br.com.luca.PageObject.PageFormulario;
+import br.com.luca.Utils.Utility;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
@@ -15,23 +17,25 @@ import cucumber.api.java.pt.Quando;
 
 public class CadasroSteps {
 	
-	static WebDriver driver;
 	private PageFormulario pageFormulario;
+	private WebDriver driver;
 
-	@Dado("^que eu acesse o site$")
-	public void queEuAcesseOSite()  {
-		String path = System.getProperty("user.dir");
-		System.getProperty("webdriver.chrome.driver", path.concat("\\Driver_versao87\\Chromedriver.exe"));
-		System.out.println(path.concat("\\Driver_versao87\\Chromedriver.exe"));
-		WebDriver driver = new ChromeDriver();
-		driver.get("http://sampleapp.tricentis.com/101/app.php");
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
+
+	@Dado("^que eu acesse o site \"([^\"]*)\"$")
+	public void queEuAcesseOSite(String url) throws Throwable {
+		
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Driver_versao87\\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+		driver.get(url);
+		Utility.getScreenshot(driver);
 		pageFormulario = new PageFormulario(driver);
 	}
 
 	@Quando("^eu realizar o preenchimento dos formularios$")
-	public void euRealizarOPreenchimentoDosFormularios() throws InterruptedException {
+	public void euRealizarOPreenchimentoDosFormularios() throws InterruptedException, IOException {
 		pageFormulario.pageForm1();
 		pageFormulario.pageForm2();
 		pageFormulario.pageForm3();
@@ -42,7 +46,7 @@ public class CadasroSteps {
 		pageFormulario.pageForm4();
 	}
 
-	@Quando("^efetuar o envio das informacoes$")
+	@Quando("^efetuo o envio das informacoes$")
 	public void efetuarOEnvioDasInformacoes() throws InterruptedException  {
 		pageFormulario.pageForm5();
 
@@ -55,3 +59,4 @@ public class CadasroSteps {
 	}
 
 }
+

@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import br.com.luca.Utils.Utility;
+
 public class PageFormulario {
 
 	private WebDriver driver;
@@ -27,6 +29,7 @@ public class PageFormulario {
 		inputcp4().sendKeys("500");
 		inputcp5().sendKeys("12/17/2020");
 		inputcp6().sendKeys("4");
+		Utility.getScreenshot(driver);
 		inputcp7().click();
 		inputcp8().sendKeys("3");
 		inputcp9().sendKeys("Gas");
@@ -34,6 +37,7 @@ public class PageFormulario {
 		inputcp11().sendKeys("6000");
 		inputcp12().sendKeys("80000");
 		inputcp13().sendKeys("15000");
+		Utility.getScreenshot(driver);
 		inputcp15().click();
 	}
 
@@ -47,6 +51,7 @@ public class PageFormulario {
         form2cp5().sendKeys("04524001");
         form2cp6().sendKeys("Employee");
         form2cp7().click();
+		Utility.getScreenshot(driver);
         form2cp8().click();
         
 	}
@@ -60,6 +65,7 @@ public class PageFormulario {
         form3cp4().sendKeys("Full Coverage");
         form3cp5().click();;
         form3cp6().sendKeys("Yes");
+		Utility.getScreenshot(driver);
         form3cp7().click();
         
 	}
@@ -68,6 +74,7 @@ public class PageFormulario {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("javascript:window.scrollBy(0,350)");
         form4cp1().click();
+		Utility.getScreenshot(driver);
         form4cp2().click();
         
 	}
@@ -79,6 +86,7 @@ public class PageFormulario {
         form5cp2().sendKeys("userteste");
         form5cp3().sendKeys("@Teste123");
         form5cp4().sendKeys("@Teste123");
+		Utility.getScreenshot(driver);
         form5cp5().click();
         
 	}
@@ -284,11 +292,12 @@ public class PageFormulario {
 	public String pegaMsg() throws InterruptedException {
 		WebElement msgFinal = driver.findElement(By.cssSelector("body > div.sweet-alert.showSweetAlert.visible > h2"));
 		Thread.sleep(3000L);
+		Utility.getScreenshot(driver);
 		botaoOk().click();
 		return msgFinal.getText();
 	}
 	public void fechartudo() throws InterruptedException {
 		driver.quit();
 	}
-
+	
 }
