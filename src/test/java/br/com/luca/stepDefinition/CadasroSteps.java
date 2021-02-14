@@ -30,6 +30,8 @@ public class CadasroSteps {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		Utility.getScreenshot(driver);
 		pageFormulario = new PageFormulario(driver);
 	}
