@@ -1,8 +1,8 @@
 # ProjetoTricentis
-Automação cadastro de email
+Automacao cadastro de email
 
-- UTilização de pageobjects em página WEB
+- UTilizacao de pageobjects em pagina WEB
 
 - Premissas:
-	- Utilização do Browser Chrome na Versão 87.0.4280.88 (Versão oficial) 64 bits
-	- O driver Chromedriver esta no local \\Driver_versao87\\Chromedriver.exe
+	- Utilizacao do Browser Chrome na Versao 89.0.4389.82 (Versao oficial) 64 bits
+	- O driver Chromedriver esta no local \\Driver_versao89\\Chromedriver.exe
