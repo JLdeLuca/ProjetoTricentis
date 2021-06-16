@@ -24,7 +24,7 @@ public class CadasroSteps {
 	@Dado("^que eu acesse o site \"([^\"]*)\"$")
 	public void queEuAcesseOSite(String url) throws Throwable {
 		
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Driver_versao89\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Driver_versao91\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
