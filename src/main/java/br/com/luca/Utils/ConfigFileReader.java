@@ -12,7 +12,7 @@ import br.com.luca.Enums.EnvironmentType;
 public class ConfigFileReader {
 	
 	private Properties properties;
-	private final String propertyFilePath= "D://Java_Geral//Desafio_accenture//ProjetoTricentis//configs//Configuration.properties";
+	private final String propertyFilePath= "../configs/Configuration.properties";
 
 	public ConfigFileReader(){
 		BufferedReader reader;
