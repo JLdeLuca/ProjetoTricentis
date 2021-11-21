@@ -27,7 +27,7 @@ public class PageFormulario {
 		selectcp2().sendKeys("Moped");
 		inputcp3().sendKeys("8");
 		inputcp4().sendKeys("500");
-		inputcp5().sendKeys("12/17/2020");
+		inputcp5().sendKeys("05/02/2020");
 		inputcp6().sendKeys("4");
 		Utility.getScreenshot(driver);
 		inputcp7().click();
@@ -59,7 +59,7 @@ public class PageFormulario {
 	public void pageForm3() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("javascript:window.scrollBy(0,350)");
-        form3cp1().sendKeys("12/17/2021");
+        form3cp1().sendKeys("12/17/2025");
         form3cp2().sendKeys("300000");
         form3cp3().sendKeys("Bonus 8");
         form3cp4().sendKeys("Full Coverage");
