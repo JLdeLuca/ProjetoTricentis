@@ -6,5 +6,5 @@ Automacao cadastro de email
 ## Premissas:
 
 
-- Utilizacao do Browser <b>Chrome na Versão 96 (Versão oficial) 64 bits</b>
-- O driver Chromedriver esta no local <b>\\Driver_versao96\\Chromedriver.exe</b>
+- Utilizacao do Browser <b>Versão 101.0.4951.67 (Compilação oficial) (64 bits)</b>
+- O driver Chromedriver esta no local <b>\\DriverVersão 101.0.4951.67 (Compilação oficial) (64 bits)_versao101\\Chromedriver.exe</b>
